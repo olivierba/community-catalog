@@ -31,7 +31,9 @@ prometheus:
     labels:
       io.rancher.sidekicks: prom-conf
     volumes_from:
-       - prom-conf
+      - prom-conf
+    volumes:
+      - /prometheus
     links:
       - ranch-eye:ranch-eye
       - node-exporter:node-exporter
